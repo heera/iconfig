@@ -20,7 +20,7 @@ And run:
 Library on [Packagist](https://packagist.org/packages/sheikhheera/iconfig).
 
 ## An Example
-Basically a php applications or `mvc` framework use array for configurations, for example, this is a sample of database configuration
+Basically, php applications or `mvc` frameworks use array for configurations, for example, this is a sample of database configuration
 ```PHP
 return array(
  	'default' => 'mysql',
