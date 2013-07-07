@@ -120,6 +120,6 @@ var_dump($all); // full configuration array will be returned
 
 You can also use
 ```PHP
-Config::load('filePath'); new items will be added.
+Config::load('filePath'); // new items will be added.
 ```
 That's all for now. Hope, I'll be able to add more features in future, In Sha Allah! (on God's will).
