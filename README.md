@@ -55,7 +55,7 @@ item from the array. For example, if you want to get the `default` item from the
 ```PHP
 $default = $config->getDatabase('default'); // mysql
 ```
-Now, what is `getDatabase` ? Actually, in this example, I've used the file name `database.php` for this array so I can use `getDatabase()` and `setDatabase()` to get or set an item.
+Now, what is `getDatabase()` ? Actually, in this example, I've used the file name `database.php` for this array so I can use `getDatabase()` and `setDatabase()` to get or set an item.
 If I have a file named with `session.php` then I can use `getSession()` and `setSession()` to get or set any settings for session management. Which means, when you will pass the path
 (where you all configuration files are saved) to the constructor it'l load all 'php' files from that path/folder. So If, for example, in a folder named `settings` you have three files
 inside that folder as `database.php`, `session.php` and for example `chache.php` and if you initialize it using
@@ -133,7 +133,7 @@ You can also use `::find()` to search for an item as
 ```PHP
 Config::find('sqlite'); // if it exists, you'll get the value
 Config::find('connections.sqlite'); // it'll look sqlite in to the connections
-Config::find('connections.sqlite.driver'); it'll look driver in to the connections.sqlite array
+Config::find('connections.sqlite.driver'); // it'll look driver in to the connections.sqlite array
 ```
 ## Get All Using `getAll()` Method
 Also you can use
