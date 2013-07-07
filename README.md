@@ -103,16 +103,6 @@ if(Config::isExist('session')) {
     $sessionArray = Config::getSession(); // full array will be returned when called without argument
 }
 ```
-## Some more examples : 
-use a callback function with `getMethod($key, $callback)`
-```PHP
-$connections = Config::getDatabase('connections', function($data){
-  if(is_array($data) && array_key_exists('sqlite', $data)) {
-		Config::setDatabase('connections.sqlite.driver', 'myNewSqliteDriver');
-		return Config::getDatabase('connections'); // this will return connections array with new value
-	}
-});
-```
 ## Give Default Value
 Also you can use a defult value like
 ```PHP
@@ -123,6 +113,16 @@ If you have three database connections and all have a driver `key` then you can 
 ```PHP
 Config::getDatabase('connections.sqlite.driver'); // get the driver from sqlite
 Config::getDatabase('connections.pgsql.driver'); // get the driver from pgsql
+```
+## Use callbacks
+You can use closure as `getMethod($key, $callback)`
+```PHP
+$connections = Config::getDatabase('connections', function($data){
+  if(is_array($data) && array_key_exists('sqlite', $data)) {
+		Config::setDatabase('connections.sqlite.driver', 'myNewSqliteDriver');
+		return Config::getDatabase('connections'); // this will return connections array with new value
+	}
+});
 ```
 Same could be used when setting a value like `setDatabase('connections.pgsql.driver', 'pgsql')`. 
 ## Search Using `find()` Method
