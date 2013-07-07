@@ -1,6 +1,6 @@
 # Iconfig [![Build Status](https://travis-ci.org/heera/iconfig.png?branch=master)](https://travis-ci.org/heera/iconfig)
 
-A very simple, light-weight and smart configuration manager for PHP applications.
+A very simple, light-weight and smart configuration manager for `PHP`.
 
 Iconfig (Instant Config) could be used as a stand alone component to manage the configuration of any php application. It can load
 settings saved in a php file and build an array which would be available at run time. It provides useful methods to set or retrieve any configuration at the run time of an application.
