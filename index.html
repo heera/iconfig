@@ -3,54 +3,61 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Iconfig - Instant Configuration by heera</title>
+    <title>Iconfig by heera</title>
+
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
-
-      <header>
-        <h1>Iconfig - Instant Configuration</h1>
-        <p>A simple, smart, dynamic configuration manager for PHP applications.</p>
-      </header>
-
-      <div id="banner">
-        <span id="logo"></span>
-
-        <a href="https://github.com/heera/iconfig" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
-          <span>Downloads:</span>
-          <ul>
-            <li><a href="https://github.com/heera/iconfig/zipball/master" class="button">ZIP</a></li>
-            <li><a href="https://github.com/heera/iconfig/tarball/master" class="button">TAR</a></li>
-          </ul>
-        </div>
-      </div><!-- end banner -->
-
     <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
+      <header>
+        <h1>Iconfig</h1>
+        <p>An Instant configuration manager for PHP.</p>
+
+        <p class="view"><a href="https://github.com/heera/iconfig">View the Project on GitHub <small>heera/iconfig</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/heera/iconfig/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/heera/iconfig/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/heera/iconfig">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
       <section>
         <h1>
-<a name="iconfig" class="anchor" href="#iconfig"><span class="octicon octicon-link"></span></a>Iconfig</h1>
+<a name="iconfig-" class="anchor" href="#iconfig-"><span class="octicon octicon-link"></span></a>Iconfig <a href="https://travis-ci.org/heera/iconfig"><img src="https://travis-ci.org/heera/iconfig.png?branch=master" alt="Build Status"></a>
+</h1>
 
-<p>A very simple, light-weight and smart configuration manager for PHP applications.</p>
+<p>A very simple, smart, light-weight and dynamic configuration manager for <code>PHP</code>.</p>
 
 <p>Iconfig (Instant Config) could be used as a stand alone component to manage the configuration of any php application. It can load
 settings saved in a php file and build an array which would be available at run time. It provides useful methods to set or retrieve any configuration at the run time of an application.</p>
 
 <h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Iconfig uses <a href="http://getcomposer.org/">Composer</a> to make things easy.</p>
+
+<p>Learn to use composer and add this to require (in your composer.json):</p>
+
+<pre><code>"sheikhheera/iconfig": "dev-master"
+</code></pre>
+
+<p>And run:</p>
+
+<pre><code>composer update
+</code></pre>
+
+<p>Library on <a href="https://packagist.org/packages/sheikhheera/iconfig">Packagist</a>.</p>
+
+<h2>
 <a name="an-example" class="anchor" href="#an-example"><span class="octicon octicon-link"></span></a>An Example</h2>
 
-<p>Basically a php applications or <code>mvc</code> framework use array for configurations, for example, this is a sample of database configuration</p>
+<p>Basically, php applications or <code>mvc</code> frameworks use array for configurations, for example, this is a sample of database configuration</p>
 
 <div class="highlight"><pre><span class="k">return</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">'default'</span> <span class="o">=&gt;</span> <span class="s1">'mysql'</span><span class="p">,</span>
@@ -78,11 +85,14 @@ settings saved in a php file and build an array which would be available at run 
 most often all configuration files reside in a single folder, commonly, the <code>config</code> name is used. So, keeping that on mind, this dynamic configuration
 manager (or whatever you say) has been built, which loads all files from a given path. For example :</p>
 
+<h2>
+<a name="initialization" class="anchor" href="#initialization"><span class="octicon octicon-link"></span></a>Initialization</h2>
+
 <div class="highlight"><pre><span class="nv">$config</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Iconfig\Config</span><span class="p">(</span><span class="s1">'config'</span><span class="p">);</span>
 </pre></div>
 
 <p>Above code will load all files from the <code>config</code> folder (it expects arrays inside files) and will put everything in an array (groups using file name). Now, you can set/get any
-item from the array. For example, if you want to get the <code>default</code> item from the array, then you cn use</p>
+item from the array. For example, if you want to get the <code>default</code> item from the array, then you can use</p>
 
 <div class="highlight"><pre><span class="nv">$default</span> <span class="o">=</span> <span class="nv">$config</span><span class="o">-&gt;</span><span class="na">getDatabase</span><span class="p">(</span><span class="s1">'default'</span><span class="p">);</span> <span class="c1">// mysql</span>
 </pre></div>
@@ -118,7 +128,13 @@ inside that folder as <code>database.php</code>, <code>session.php</code> and fo
 <span class="p">);</span>
 </pre></div>
 
-<p>Now, you can use,</p>
+<p>Now, you can use this array to retrieve a setting or you can also set/change any predefined settings using dynamic methods.</p>
+
+<h2>
+<a name="dynamic-methods" class="anchor" href="#dynamic-methods"><span class="octicon octicon-link"></span></a>Dynamic Methods</h2>
+
+<p>You can use <code>setDatabase()</code> and <code>getDatabase</code> to set/get database' configurations and <code>setSession()</code> and <code>getSession</code> for session and so on.
+These dynamic methods will be available to you after initialization, using php's <code>overloading</code> technic.</p>
 
 <div class="highlight"><pre><span class="nv">$settings</span><span class="o">-&gt;</span><span class="na">setDatabase</span><span class="p">(</span><span class="s1">'default'</span><span class="p">,</span> <span class="s1">'sqlite'</span><span class="p">);</span>
 <span class="nv">$settings</span><span class="o">-&gt;</span><span class="na">getDatabase</span><span class="p">(</span><span class="s1">'default'</span><span class="p">);</span> <span class="c1">// sqlite</span>
@@ -127,7 +143,10 @@ inside that folder as <code>database.php</code>, <code>session.php</code> and fo
 <span class="nv">$settings</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">(</span><span class="s1">'lifetime'</span><span class="p">);</span> <span class="c1">// 240</span>
 </pre></div>
 
-<p>If you want you can set an <code>Alias</code> and can use methods <code>statically</code> like</p>
+<h2>
+<a name="using-alias" class="anchor" href="#using-alias"><span class="octicon octicon-link"></span></a>Using Alias</h2>
+
+<p>If you want you can set an <code>Alias</code> and can use methods <code>statically</code> like this :</p>
 
 <div class="highlight"><pre><span class="k">new</span> <span class="nx">Iconfig\Config</span><span class="p">(</span><span class="s1">'../myApp/config'</span><span class="p">,</span> <span class="s1">'Config'</span><span class="p">);</span> <span class="c1">// Config as Alias, you can use any name</span>
 <span class="k">if</span><span class="p">(</span><span class="nx">Config</span><span class="o">::</span><span class="na">isExist</span><span class="p">(</span><span class="s1">'session'</span><span class="p">))</span> <span class="p">{</span>
@@ -136,7 +155,27 @@ inside that folder as <code>database.php</code>, <code>session.php</code> and fo
 <span class="p">}</span>
 </pre></div>
 
-<p>Some more examples (use a callback function with <code>getMethod($key, $callback)</code>)</p>
+<h2>
+<a name="give-default-value" class="anchor" href="#give-default-value"><span class="octicon octicon-link"></span></a>Give Default Value</h2>
+
+<p>Also you can use a defult value like</p>
+
+<div class="highlight"><pre><span class="nv">$chache</span> <span class="o">=</span> <span class="nx">getChache</span><span class="p">(</span><span class="s1">'path'</span><span class="p">,</span> <span class="s1">'/web'</span><span class="p">)</span> <span class="c1">// if path doesn't exist then "/web" will be returned</span>
+</pre></div>
+
+<h2>
+<a name="access-nested-arrays" class="anchor" href="#access-nested-arrays"><span class="octicon octicon-link"></span></a>Access Nested Arrays</h2>
+
+<p>If you have three database connections and all have a driver <code>key</code> then you can specify which <code>driver</code> key you want like</p>
+
+<div class="highlight"><pre><span class="nx">Config</span><span class="o">::</span><span class="na">getDatabase</span><span class="p">(</span><span class="s1">'connections.sqlite.driver'</span><span class="p">);</span> <span class="c1">// get the driver from sqlite</span>
+<span class="nx">Config</span><span class="o">::</span><span class="na">getDatabase</span><span class="p">(</span><span class="s1">'connections.pgsql.driver'</span><span class="p">);</span> <span class="c1">// get the driver from pgsql</span>
+</pre></div>
+
+<h2>
+<a name="use-callbacks" class="anchor" href="#use-callbacks"><span class="octicon octicon-link"></span></a>Use callbacks</h2>
+
+<p>You can use closure as <code>getMethod($key, $callback)</code></p>
 
 <div class="highlight"><pre><span class="nv">$connections</span> <span class="o">=</span> <span class="nx">Config</span><span class="o">::</span><span class="na">getDatabase</span><span class="p">(</span><span class="s1">'connections'</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="nv">$data</span><span class="p">){</span>
   <span class="k">if</span><span class="p">(</span><span class="nb">is_array</span><span class="p">(</span><span class="nv">$data</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nb">array_key_exists</span><span class="p">(</span><span class="s1">'sqlite'</span><span class="p">,</span> <span class="nv">$data</span><span class="p">))</span> <span class="p">{</span>
@@ -146,18 +185,10 @@ inside that folder as <code>database.php</code>, <code>session.php</code> and fo
 <span class="p">});</span>
 </pre></div>
 
-<p>Also you can use a defult value like</p>
-
-<div class="highlight"><pre><span class="nv">$chache</span> <span class="o">=</span> <span class="nx">getChache</span><span class="p">(</span><span class="s1">'path'</span><span class="p">,</span> <span class="s1">'/web'</span><span class="p">)</span> <span class="c1">// if path doesn't exist then "/web" will be returned</span>
-</pre></div>
-
-<p>If you have three database connections and all have a driver <code>key</code> then you can specify which <code>driver</code> key you want like</p>
-
-<div class="highlight"><pre><span class="nx">Config</span><span class="o">::</span><span class="na">getDatabase</span><span class="p">(</span><span class="s1">'connections.sqlite.driver'</span><span class="p">);</span> <span class="c1">// get the driver from sqlite</span>
-<span class="nx">Config</span><span class="o">::</span><span class="na">getDatabase</span><span class="p">(</span><span class="s1">'connections.pgsql.driver'</span><span class="p">);</span> <span class="c1">// get the driver from pgsql</span>
-</pre></div>
-
 <p>Same could be used when setting a value like <code>setDatabase('connections.pgsql.driver', 'pgsql')</code>. </p>
+
+<h2>
+<a name="search-using-find-method" class="anchor" href="#search-using-find-method"><span class="octicon octicon-link"></span></a>Search Using <code>find()</code> Method</h2>
 
 <p>You can also use <code>::find()</code> to search for an item as</p>
 
@@ -166,25 +197,31 @@ inside that folder as <code>database.php</code>, <code>session.php</code> and fo
 <span class="nx">Config</span><span class="o">::</span><span class="na">find</span><span class="p">(</span><span class="s1">'connections.sqlite.driver'</span><span class="p">);</span> <span class="nx">it</span><span class="err">'</span><span class="nx">ll</span> <span class="nx">look</span> <span class="nx">driver</span> <span class="nx">in</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">connections</span><span class="o">.</span><span class="nx">sqlite</span> <span class="k">array</span>
 </pre></div>
 
+<h2>
+<a name="get-all-using-getall-method" class="anchor" href="#get-all-using-getall-method"><span class="octicon octicon-link"></span></a>Get All Using <code>getAll()</code> Method</h2>
+
 <p>Also you can use</p>
 
 <div class="highlight"><pre><span class="nv">$all</span> <span class="o">=</span> <span class="nx">Config</span><span class="o">::</span><span class="na">getAll</span><span class="p">();</span>
 <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$all</span><span class="p">);</span> <span class="c1">// full configuration array will be returned</span>
 </pre></div>
 
+<h2>
+<a name="load-more-files-using-load-method" class="anchor" href="#load-more-files-using-load-method"><span class="octicon octicon-link"></span></a>Load More Files Using <code>load()</code> Method</h2>
+
 <p>You can also use</p>
 
-<div class="highlight"><pre><span class="nx">Config</span><span class="o">::</span><span class="na">load</span><span class="p">(</span><span class="s1">'filePath'</span><span class="p">);</span> <span class="k">new</span> <span class="nx">items</span> <span class="nx">will</span> <span class="nx">be</span> <span class="nx">added</span><span class="o">.</span>
+<div class="highlight"><pre><span class="nx">Config</span><span class="o">::</span><span class="na">load</span><span class="p">(</span><span class="s1">'filePath'</span><span class="p">);</span> <span class="c1">// new items will be added.</span>
 </pre></div>
 
-<p>That's all for now. Hope, I'll be able to add more features in future, In Sha Allah! (on God's will).</p>
+<p>Well, that's all for now. Feel free to use or modify it to improve it's functionality or if you find any bug, please inform me. Hope, I'll be able to add more features in future In-Sha-Allah (on God's will). Thanks!</p>
       </section>
       <footer>
-        <p>Project maintained by <a href="https://github.com/heera">heera</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+        <p>This project is maintained by <a href="https://github.com/heera">heera</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    <script src="javascripts/scale.fix.js"></script>
     
   </body>
 </html>
