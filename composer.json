@@ -1,5 +1,5 @@
 {
-	"name": "sheikhheera/Iconfig",
+	"name": "sheikhheera/iconfig",
 	"description": "A simple, smart, dynamic configuration manager for PHP applications.",
 	"homepage": "https://github.com/heera/Iconfig",
 	"keywords": ["config", "settings", "component"],
