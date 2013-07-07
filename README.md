@@ -46,11 +46,12 @@ return array(
 An `mvc` framework or an applicarion without any framework must have some common settings and user can configure those according to his/her need and
 most often all configuration files reside in a single folder, commonly, the `config` name is used. So, keeping that on mind, this dynamic configuration
 manager (or whatever you say) has been built, which loads all files from a given path. For example :
+## Initialization
 ```PHP
 $config = new Iconfig\Config('config');
 ```
 Above code will load all files from the `config` folder (it expects arrays inside files) and will put everything in an array (groups using file name). Now, you can set/get any
-item from the array. For example, if you want to get the `default` item from the array, then you cn use
+item from the array. For example, if you want to get the `default` item from the array, then you can use
 ```PHP
 $default = $config->getDatabase('default'); // mysql
 ```
@@ -84,6 +85,7 @@ Array(
 );
 ```
 Now, you can use,
+## Usage
 ```PHP
 $settings->setDatabase('default', 'sqlite');
 $settings->getDatabase('default'); // sqlite
@@ -93,6 +95,7 @@ $settings->getSession('lifetime'); // 240
 ```
 
 If you want you can set an `Alias` and can use methods `statically` like
+## Using Alias
 ```PHP
 new Iconfig\Config('../myApp/config', 'Config'); // Config as Alias, you can use any name
 if(Config::isExist('session')) {
@@ -100,7 +103,8 @@ if(Config::isExist('session')) {
     $sessionArray = Config::getSession(); // full array will be returned when called without argument
 }
 ```
-Some more examples (use a callback function with `getMethod($key, $callback)`)
+## Some more examples : 
+use a callback function with `getMethod($key, $callback)`
 ```PHP
 $connections = Config::getDatabase('connections', function($data){
   if(is_array($data) && array_key_exists('sqlite', $data)) {
