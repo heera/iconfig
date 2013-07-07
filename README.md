@@ -1,4 +1,4 @@
-# Iconfig
+# Iconfig [![Build Status](https://travis-ci.org/heera/iconfig.png?branch=master)](https://travis-ci.org/heera/iconfig)
 
 A very simple, light-weight and smart configuration manager for PHP applications.
 
