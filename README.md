@@ -43,7 +43,7 @@ return array(
    ),
 );
 ```
-An `mvc` framework or an applicarion without any framework must have some common settings and user can configure those according to his/her need and
+An `mvc` framework or an application without any framework must have some common settings and user can configure those according to his/her need and
 most often all configuration files reside in a single folder, commonly, the `config` name is used. So, keeping that on mind, this dynamic configuration
 manager (or whatever you say) has been built, which loads all files from a given path. For example :
 ## Initialization
