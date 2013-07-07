@@ -1,6 +1,6 @@
 {
 	"name": "sheikhheera/iconfig",
-	"description": "A simple, smart, dynamic configuration manager for PHP applications.",
+	"description": "A very simple, smart, light-weight and dynamic configuration manager for PHP.",
 	"homepage": "https://github.com/heera/Iconfig",
 	"keywords": ["config", "settings", "component"],
 	"license": "MIT",
