@@ -5,6 +5,20 @@ A very simple, light-weight and smart configuration manager for PHP applications
 Iconfig (Instant Config) could be used as a stand alone component to manage the configuration of any php application. It can load
 settings saved in a php file and build an array which would be available at run time. It provides useful methods to set or retrieve any configuration at the run time of an application.
 
+## Installation
+
+Iconfig uses [Composer](http://getcomposer.org/) to make things easy.
+
+Learn to use composer and add this to require (in your composer.json):
+
+    "sheikhheera/iconfig": "dev-master"
+    
+And run:
+
+	composer update
+
+Library on [Packagist](https://packagist.org/packages/sheikhheera/iconfig).
+
 ## An Example
 Basically a php applications or `mvc` framework use array for configurations, for example, this is a sample of database configuration
 ```PHP
