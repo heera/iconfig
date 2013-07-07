@@ -146,4 +146,4 @@ You can also use
 ```PHP
 Config::load('filePath'); // new items will be added.
 ```
-That's it. Hope, I'll be able to add more features in future In Sha Allah (on God's will).
+Well, that's all for now. Feel free to use or modify it to improve it's functionality or if you find any bug, please inform me. Hope, I'll be able to add more features in future In-Sha-Allah (on God's will). Thanks!
