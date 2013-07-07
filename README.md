@@ -84,7 +84,7 @@ Array(
   )
 );
 ```
-Now, you can use,
+Now, you can use `setDatabase()` and `getDatabase` to set/get database' configuration and `setSession()` and `getSession` for session and so on.
 ## Usage
 ```PHP
 $settings->setDatabase('default', 'sqlite');
@@ -94,8 +94,8 @@ $settings->setSession('lifetime', 240);
 $settings->getSession('lifetime'); // 240
 ```
 
-If you want you can set an `Alias` and can use methods `statically` like
 ## Using Alias
+If you want you can set an `Alias` and can use methods `statically` like this :
 ```PHP
 new Iconfig\Config('../myApp/config', 'Config'); // Config as Alias, you can use any name
 if(Config::isExist('session')) {
@@ -113,16 +113,19 @@ $connections = Config::getDatabase('connections', function($data){
 	}
 });
 ```
+## Give Default Value
 Also you can use a defult value like
 ```PHP
 $chache = getChache('path', '/web') // if path doesn't exist then "/web" will be returned
 ```
+## Access Nested Arrays
 If you have three database connections and all have a driver `key` then you can specify which `driver` key you want like
 ```PHP
 Config::getDatabase('connections.sqlite.driver'); // get the driver from sqlite
 Config::getDatabase('connections.pgsql.driver'); // get the driver from pgsql
 ```
 Same could be used when setting a value like `setDatabase('connections.pgsql.driver', 'pgsql')`. 
+## Search Using `find()` Method
 
 You can also use `::find()` to search for an item as
 ```PHP
@@ -130,12 +133,13 @@ Config::find('sqlite'); // if it exists, you'll get the value
 Config::find('connections.sqlite'); // it'll look sqlite in to the connections
 Config::find('connections.sqlite.driver'); it'll look driver in to the connections.sqlite array
 ```
+## Get All Using `getAll()` Method
 Also you can use
 ```PHP
 $all = Config::getAll();
 var_dump($all); // full configuration array will be returned
 ```
-
+## Load More Files Using `load()` Method
 You can also use
 ```PHP
 Config::load('filePath'); // new items will be added.
