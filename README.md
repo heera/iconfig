@@ -12,6 +12,10 @@ Iconfig uses [Composer](http://getcomposer.org/) to make things easy.
 Learn to use composer and add this to require (in your composer.json):
 
     "sheikhheera/iconfig": "dev-master"
+    
+And run:
+
+	composer update
 
 Library on [Packagist](https://packagist.org/packages/sheikhheera/iconfig).
 
