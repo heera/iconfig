@@ -9,7 +9,7 @@ settings saved in a php file and build an array which would be available at run 
 Basically a php applications or `mvc` framework use array for configurations, for example, this is a sample of database configuration
 ```PHP
 return array(
-   'default' => 'mysql',
+ 	'default' => 'mysql',
 	'connections' => array(
 		'sqlite' => array(
 			'driver'   => 'sqlite',
@@ -120,6 +120,6 @@ var_dump($all); // full configuration array will be returned
 
 You can also use
 ```PHP
-Config::load('filePath'); // new items will be added.
+Config::load('filePath'); new items will be added.
 ```
 That's all for now. Hope, I'll be able to add more features in future, if possible (Insha Allah!).
