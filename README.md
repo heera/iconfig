@@ -84,10 +84,10 @@ Array(
   )
 );
 ```
-Now, you can use these array to retrieve a setting or you can also set/change any predefined settings using dynamic methods.
+Now, you can use this array to retrieve a setting or you can also set/change any predefined settings using dynamic methods.
 ## Dynamic Methods
 You can use `setDatabase()` and `getDatabase` to set/get database' configurations and `setSession()` and `getSession` for session and so on.
-These dynamic methods will be available to you after initialization using php's `overloading` technic
+These dynamic methods will be available to you after initialization, using php's `overloading` technic.
 ```PHP
 $settings->setDatabase('default', 'sqlite');
 $settings->getDatabase('default'); // sqlite
