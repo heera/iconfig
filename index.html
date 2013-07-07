@@ -97,7 +97,7 @@ item from the array. For example, if you want to get the <code>default</code> it
 <div class="highlight"><pre><span class="nv">$default</span> <span class="o">=</span> <span class="nv">$config</span><span class="o">-&gt;</span><span class="na">getDatabase</span><span class="p">(</span><span class="s1">'default'</span><span class="p">);</span> <span class="c1">// mysql</span>
 </pre></div>
 
-<p>Now, what is <code>getDatabase</code> ? Actually, in this example, I've used the file name <code>database.php</code> for this array so I can use <code>getDatabase()</code> and <code>setDatabase()</code> to get or set an item.
+<p>Now, what is <code>getDatabase()</code> ? Actually, in this example, I've used the file name <code>database.php</code> for this array so I can use <code>getDatabase()</code> and <code>setDatabase()</code> to get or set an item.
 If I have a file named with <code>session.php</code> then I can use <code>getSession()</code> and <code>setSession()</code> to get or set any settings for session management. Which means, when you will pass the path
 (where you all configuration files are saved) to the constructor it'l load all 'php' files from that path/folder. So If, for example, in a folder named <code>settings</code> you have three files
 inside that folder as <code>database.php</code>, <code>session.php</code> and for example <code>chache.php</code> and if you initialize it using</p>
@@ -194,7 +194,7 @@ These dynamic methods will be available to you after initialization, using php's
 
 <div class="highlight"><pre><span class="nx">Config</span><span class="o">::</span><span class="na">find</span><span class="p">(</span><span class="s1">'sqlite'</span><span class="p">);</span> <span class="c1">// if it exists, you'll get the value</span>
 <span class="nx">Config</span><span class="o">::</span><span class="na">find</span><span class="p">(</span><span class="s1">'connections.sqlite'</span><span class="p">);</span> <span class="c1">// it'll look sqlite in to the connections</span>
-<span class="nx">Config</span><span class="o">::</span><span class="na">find</span><span class="p">(</span><span class="s1">'connections.sqlite.driver'</span><span class="p">);</span> <span class="nx">it</span><span class="err">'</span><span class="nx">ll</span> <span class="nx">look</span> <span class="nx">driver</span> <span class="nx">in</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">connections</span><span class="o">.</span><span class="nx">sqlite</span> <span class="k">array</span>
+<span class="nx">Config</span><span class="o">::</span><span class="na">find</span><span class="p">(</span><span class="s1">'connections.sqlite.driver'</span><span class="p">);</span> <span class="c1">// it'll look driver in to the connections.sqlite array</span>
 </pre></div>
 
 <h2>
