@@ -12,7 +12,8 @@
  */
 
 /**
- * This class gives the ability to access non-static methods statically
+ * This class gives the ability to access
+ * any non-static methods statically
  *
  * Class AliasFacade
  *

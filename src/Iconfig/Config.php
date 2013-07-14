@@ -12,9 +12,10 @@
  */
 
 /**
- * This class gives the ability to manipulate configurations for an application.
+ * This class gives the ability to manipulate
+ * the configurations for an application.
  *
- * Class AliasFacade
+ * Class Confog
  *
  * @package Config
  */
