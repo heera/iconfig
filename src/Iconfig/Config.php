@@ -15,9 +15,10 @@
  * This class gives the ability to manipulate
  * the configurations for an application.
  *
+ *
  * Class Confog
  *
- * @package Config
+ * @package IConfig
  */
 
 class Config {
