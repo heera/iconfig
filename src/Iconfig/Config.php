@@ -14,7 +14,7 @@
 /**
  * This class gives the ability to manipulate configurations for an application.
  *
- * Class AliasFacade
+ * Class Config
  *
  * @package Config
  */
