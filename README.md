@@ -11,7 +11,7 @@ Iconfig uses [Composer](http://getcomposer.org/) to make things easy.
 
 Learn to use composer and add this to require (in your composer.json):
 
-    "sheikhheera/iconfig": "dev-master"
+    "sheikhheera/iconfig": "1.0.0"
     
 And run:
 
