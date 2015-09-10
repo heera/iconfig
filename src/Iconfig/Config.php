@@ -24,8 +24,8 @@
 class Config {
 	
 	protected $found = false;
-	protected $currentItem = [];
-	protected $commonSettings = [];
+	protected $currentItem = array();
+	protected $commonSettings = array();
 	
 	/**
 	* 
