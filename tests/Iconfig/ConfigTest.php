@@ -42,10 +42,4 @@ class ConfigTest extends \PHPUnit_Framework_Testcase
 		$this->assertEquals($d1, $d2);
 		$this->assertInstanceOf('Iconfig\AliasFacade', new \Config);
 	}
-
-
-	public function testFind($item = null, $array = null)
-	{
-		
-	}
 }

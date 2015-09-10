@@ -23,9 +23,9 @@
 
 class Config {
 	
-	private $commonSettings = array();
-	private $currentItem = array();
-	private $found = false;
+	protected $found = false;
+	protected $currentItem = [];
+	protected $commonSettings = [];
 	
 	/**
 	* 
@@ -66,8 +66,10 @@ class Config {
 
 			// This part will set properties using set
 			if($methodPrefix=='set'){
-				if(count($params) < 2){
-					throw new \Exception("Invalid parameter(s) given, method <strong>$method</strong> requires 2 parameter(s),  but " . count($params) . " given!");
+				if(count($params) < 2) {
+					$message = "Invalid parameter(s) given, method <strong>$method</strong> requires 2";
+					$message .= " parameter(s),  but " . count($params) . " given!";
+					throw new \Exception($message);
 				}
 
 				$key = strtolower($methodName).'.'.$params[0];
@@ -80,7 +82,9 @@ class Config {
 			elseif($methodPrefix=='get'){
 				
 				// Set default value to return when no properties found
-				$default = count($params) === 2 && !is_callable($params[1]) ? $params[1] : ( count($params) === 2 && $params[0] === '' ? strtolower($methodName) : null );
+				$default = count($params) === 2 && !is_callable($params[1])
+				? $params[1]
+				: ( count($params) === 2 && $params[0] === '' ? strtolower($methodName) : null );
 
 				if($params==null){
 					$key = strtolower($methodName);
