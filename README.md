@@ -1,4 +1,4 @@
-# Iconfig [![Build Status](https://travis-ci.org/heera/iconfig.png?branch=master)](https://travis-ci.org/heera/iconfig)
+# Iconfig [![Build Status](https://travis-ci.org/heera/iconfig.svg?branch=master)](https://travis-ci.org/heera/iconfig) [![Latest Stable Version](https://poser.pugx.org/sheikhheera/iconfig/version)](https://packagist.org/packages/sheikhheera/iconfig) [![Total Downloads](https://poser.pugx.org/sheikhheera/iconfig/downloads)](https://packagist.org/packages/sheikhheera/iconfig) [![License](https://poser.pugx.org/sheikhheera/iconfig/license)](https://packagist.org/packages/sheikhheera/iconfig)
 
 A very simple, smart, light-weight and dynamic configuration manager for `PHP`.
 
